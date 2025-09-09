@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    text-align: center;
+    margin-top: 200px;
+    line-height: 50px;
+}
+
+button {
+    padding: 20px 50px;
+}
