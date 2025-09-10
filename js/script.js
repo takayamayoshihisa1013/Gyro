@@ -62,7 +62,7 @@ function handleMotion(event) {
     // 合成加速度を表示
     magnitude_result.textContent = magnitude;
 
-    if (y > 30 || y < -30) {
+    if (y > 60 || y < -60) {
       const fortune = fortunes[Math.floor(Math.random() * fortunes.length)];
       omikuji_result.textContent = fortune;
     }
