@@ -62,11 +62,10 @@ function handleMotion(event) {
     // 合成加速度を表示
     magnitude_result.textContent = magnitude;
 
-    if (magnitude > 20 && (y > 15 || y < -15)) {
+    if (y > 15 || y < -15) {
       const fortune = fortunes[Math.floor(Math.random() * fortunes.length)];
       omikuji_result.textContent = fortune;
     }
-
 
     // 画面に加速度を表示
     output.innerHTML = `
