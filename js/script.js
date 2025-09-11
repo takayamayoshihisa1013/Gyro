@@ -8,13 +8,18 @@ const fortunes = ["大吉", "中吉", "小吉", "吉", "凶"];
 
 // 出力を画面とコンソールに両方出す関数
 function log(message) {
-  console.log(message); // デベロッパーツールに表示
-  output.innerHTML += `<div>${message}</div>`; // 画面に追記表示
+  // デベロッパーツールに表示
+  console.log(message); 
+  // 画面に追記表示
+  output.innerHTML += `<div>${message}</div>`; 
 }
+
+
 
 // ユーザーからセンサー利用の許可をもらい、イベントを登録する関数
 function requestPermission() {
-  log("requestPermission 呼び出し"); // 呼ばれたことを表示
+  // 呼ばれたことを表示
+  log("requestPermission 呼び出し"); 
 
   // おみくじが2回以上送信されないようにするための初期値
   let count = 0
@@ -62,7 +67,7 @@ function handleMotion(event) {
     // 合成加速度を表示
     magnitude_result.textContent = magnitude;
 
-    if (y > 50 || y < -50) {
+    if (y > 35 || y < -35) {
       const fortune = fortunes[Math.floor(Math.random() * fortunes.length)];
       omikuji_result.textContent = fortune;
     }
